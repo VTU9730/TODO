@@ -1,0 +1,6 @@
+#todo-list{
+    list-style: none;
+}
+#list-item{
+    display:flex;
+}
