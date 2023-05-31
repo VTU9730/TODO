@@ -1,7 +1,8 @@
- function App() {
+import Todoapp from './Todoapp.js'
+function App() {
   return (
     <div>
-    <h2>App Component</h2>
+      <Todoapp />
     </div>
   );
 }
