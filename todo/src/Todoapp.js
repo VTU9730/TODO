@@ -19,17 +19,20 @@ function Todoapp() {
         setIsEdit(!isEdit)
     }
   return (
-    <div>
+    <div id="app">
+        <h2>Todo-App</h2>
          <input onChange={(e)=>setTodo(e.target.value)} type="text" value={todo}></input>
-         <button onClick={addTodo}>Add</button>
+         <button className='btn btn-light' onClick={addTodo}>Add</button>
          <ul id="todo-list">
+         <table>
             {todos.map((todo)=>
-            <div id="list-item" key={todo.id}>
-                <li contentEditable={isEdit}>{todo.text}</li>
-                <button onClick={()=>handleEdit(todo.id)}>{isEdit?'v':'i'}</button>
-                <button onClick={()=>handleRemove(todo.id)}>-</button>
-            </div>
+            <tr>
+                <td><li contentEditable={isEdit}>{todo.text}</li></td>
+                <td><button className='btn btn-info' onClick={()=>handleEdit(todo.id)}>{isEdit?'Ok':'Edit'}</button></td>
+                <td><button className='btn btn-danger' onClick={()=>handleRemove(todo.id)}>Remove</button></td>
+            </tr>
             )}
+            </table>
          </ul>
     </div>
   );

@@ -1,6 +1,20 @@
+body,*{
+    background-color: aquamarine;
+    font-family:'Crimson-Text', serif;
+}
+#app{
+    margin-left:40%;
+    font-family:'Crimson-Text', serif;
+}
 #todo-list{
     list-style: none;
+    /* text-align: center; */
+    vertical-align: middle;
+    margin-top:3%;
 }
 #list-item{
     display:flex;
+}
+.btn{
+    margin-left: 10px;
 }
